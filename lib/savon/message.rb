@@ -15,6 +15,7 @@ class Savon
     def build(message)
       builder = Builder::XmlMarkup.new(indent: 2, margin: 2)
 
+      builder.text! "\n"
       build_elements(@parts, message.dup, builder)
       builder.target!
     end
