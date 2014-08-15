@@ -53,10 +53,7 @@ class Savon
 
       builder.tag! :env, :Envelope, collect_namespaces do |xml|
         xml.tag!(:env, :Header) { |xml| xml << header }
-        xml.tag!(:env, :Body) do |xml|
-          xml << body
-          xml.text! "\n"
-        end
+        xml.tag!(:env, :Body) { |xml| xml << body }
       end
 
       builder.target!
