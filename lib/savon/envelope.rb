@@ -66,7 +66,7 @@ class Savon
 
       tag = [nsid, name].compact.join(':')
 
-      '<%{tag}>%{body}</%{tag}>' % { tag: tag, body: body }
+      "<%{tag}>\n%{body}</%{tag}>\n" % { tag: tag, body: body }
     end
 
     def rpc_call?
